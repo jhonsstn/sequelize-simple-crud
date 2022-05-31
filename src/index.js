@@ -9,7 +9,7 @@ const app = Express();
 
 app.use(Express.json());
 
-app.get('/', (req, res) => {
+app.post('/create', (req, res) => {
   try {
     const { name, birth_date, email } = req.body;
     User.create({
